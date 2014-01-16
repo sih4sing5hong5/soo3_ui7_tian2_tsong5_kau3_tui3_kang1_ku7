@@ -14,6 +14,8 @@
 ActiveRecord::Schema.define(version: 20140115151033) do
 
   create_table '"台語文數位典藏"."改過段落資料"', force: true do |t|
+#    t.integer "流水號"
+    t.integer "id"
     t.string   "檔案名"
     t.string   "漢羅"
     t.string  "全羅"
