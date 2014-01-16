@@ -1,0 +1,30 @@
+<%= form_for(@kai2_tuan7) do |f| %>
+  <% if @kai2_tuan7.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kai2_tuan7.errors.count, "error") %> prohibited this kai2_tuan7 from being saved:</h2>
+
+      <ul>
+      <% @kai2_tuan7.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title,'檔案名' %>
+    <%= f.text_field :檔案名 %>
+  </div>
+  <div class="field">
+    <%= f.label :title,'漢羅' %>
+    <%= f.text_area :漢羅 %>
+  </div>
+  <div class="field">
+    <%= f.label :title,'全羅' %>
+    <%= f.text_area :全羅 %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

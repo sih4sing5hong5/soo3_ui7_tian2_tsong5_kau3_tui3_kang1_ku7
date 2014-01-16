@@ -1,0 +1,28 @@
+<h1>Listing kai2_tuan7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kai2_tuan7s.each do |kai2_tuan7| %>
+      <tr>
+        <td><%= kai2_tuan7.檔案名 %></td>
+        <!-- <td><%= kai2_tuan7.漢羅 %></td>
+        <td><%= kai2_tuan7.全羅 %></td> -->
+        <td><%= link_to 'Show',(kai2_tuan7) %></td>
+        <td><%= link_to 'Show', :action=>'show',:id=>(kai2_tuan7) %></td>
+        <td><%= link_to 'Edit', edit_kai2_tuan7_path(kai2_tuan7) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kai2 tuan7', new_kai2_tuan7_path %>
