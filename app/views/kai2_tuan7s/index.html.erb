@@ -4,7 +4,8 @@
   <thead>
     <tr>
       <th></th>
-      <th></th>
+      <th>漢羅逝</th>
+      <th>全羅逝</th>
       <th></th>
     </tr>
   </thead>
@@ -13,10 +14,9 @@
     <% @kai2_tuan7s.each do |kai2_tuan7| %>
       <tr>
         <td><%= kai2_tuan7.檔案名 %></td>
-        <!-- <td><%= kai2_tuan7.漢羅 %></td>
-        <td><%= kai2_tuan7.全羅 %></td> -->
-        <td><%= link_to 'Show',(kai2_tuan7) %></td>
-        <td><%= link_to 'Show', :action=>'show',:id=>(kai2_tuan7) %></td>
+        <td><%= kai2_tuan7.漢羅逝 %></td>
+        <td><%= kai2_tuan7.全羅逝 %></td>
+    <!--     <td><%= link_to 'Show',(kai2_tuan7) %></td> -->
         <td><%= link_to 'Edit', edit_kai2_tuan7_path(kai2_tuan7) %></td>
       </tr>
     <% end %>

@@ -14,17 +14,31 @@
   <div class="field">
     <%= f.label :title,'檔案名' %>
     <%= f.text_field :檔案名 %>
-  </div>
-  <div class="field">
-    <%= f.label :title,'漢羅' %>
-    <%= f.text_area :漢羅 %>
-  </div>
-  <div class="field">
-    <%= f.label :title,'全羅' %>
-    <%= f.text_area :全羅 %>
+    <%= f.submit %>
+    <%= f.text_field :漢羅逝 %>
+    <%= f.text_field :全羅逝 %>
   </div>
   
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field">
+  <table>
+	<tr>
+	<td class='行號'>
+	<textarea warp="off"><% (1..200).each do |數字| %><%= 數字 %>
+	<% end %>
+	</textarea>
+	</td>
+	<td>
+    <%= f.text_area :漢羅 ,:wrap=>"off"%>
+  </td>
+	<td class='行號'	>
+	<textarea warp="off"><% (1..200).each do |數字| %><%= 數字 %>
+	<% end %>
+	</textarea>
+	</td>
+  <td>
+    <%= f.text_area :全羅  ,:wrap=>"off"%>
+    </td>
+    </tr>
+  </table>
   </div>
 <% end %>

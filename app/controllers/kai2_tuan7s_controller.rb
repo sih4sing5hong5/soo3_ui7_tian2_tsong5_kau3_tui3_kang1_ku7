@@ -4,7 +4,7 @@ class Kai2Tuan7sController < ApplicationController
   # GET /kai2_Kai2Tuan7s
   # GET /kai2_Kai2Tuan7s.json
   def index
-    @kai2_tuan7s = Kai2Tuan7.all.limit(5)
+    @kai2_tuan7s = Kai2Tuan7.where('漢羅逝!=全羅逝').order(漢羅逝: :desc)
   end
 
   # GET /kai2_Kai2Tuan7s/1
@@ -41,12 +41,12 @@ class Kai2Tuan7sController < ApplicationController
   # PATCH/PUT /kai2_Kai2Tuan7s/1.json
   def update
     respond_to do |format|
-      if @kai2_Kai2Tuan7.update(kai2_Kai2Tuan7_params)
-        format.html { redirect_to @kai2_Kai2Tuan7, notice: 'Kai2 Kai2Tuan7 was successfully updated.' }
+      if @kai2_tuan7.update(kai2_Kai2Tuan7_params)
+        format.html { redirect_to edit_kai2_tuan7_path(@kai2_tuan7), notice: 'Kai2 Kai2Tuan7 was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @kai2_Kai2Tuan7.errors, status: :unprocessable_entity }
+        format.json { render json: @kai2_tuan7.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,7 +54,7 @@ class Kai2Tuan7sController < ApplicationController
   # DELETE /kai2_Kai2Tuan7s/1
   # DELETE /kai2_Kai2Tuan7s/1.json
   def destroy
-    @kai2_Kai2Tuan7.destroy
+    @kai2_tuan7.destroy
     respond_to do |format|
       format.html { redirect_to kai2_Kai2Tuan7s_url }
       format.json { head :no_content }
@@ -70,6 +70,6 @@ class Kai2Tuan7sController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def kai2_Kai2Tuan7_params
-      params.require(:kai2_tuan7).permit(:流水號,:檔案名,:漢羅,:全羅,:id)
+      params.require(:kai2_tuan7).permit(:流水號,:檔案名,:漢羅,:全羅,:漢羅逝,:全羅逝,:id)
     end
 end
