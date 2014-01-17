@@ -1,0 +1,38 @@
+<%= form_for(@kai2_ji7) do |f| %>
+  <% if @kai2_ji7.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kai2_ji7.errors.count, "error") %> prohibited this kai2_ji7 from being saved:</h2>
+
+      <ul>
+      <% @kai2_ji7.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :流水號 %>
+    <%= f.number_field :流水號 %>
+    <%= f.submit %>
+  </div>
+  
+  <div class="field">
+  <table>
+	<tr>
+	<td class='行號'	>
+    <%= f.text_area :無齊記號 ,:wrap=>"off"%>
+	</td>
+	<td>
+    <%= f.text_area :漢羅文 ,:wrap=>"off"%>
+  </td>
+	<td class='行號'	>
+    <%= f.text_area :無齊記號 ,:wrap=>"off"%>
+	</td>
+  <td>
+    <%= f.text_area :全羅文  ,:wrap=>"off"%>
+    </td>
+    </tr>
+  </table>
+  </div>
+<% end %>

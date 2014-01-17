@@ -1,0 +1,25 @@
+<h1>Listing kai2_ji7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>流水號</th>
+      <th>無齊記號</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kai2_ji7s.each do |kai2_ji7| %>
+      <tr>
+        <td><%= kai2_ji7.流水號 %></td>
+        <td><%= kai2_ji7.無齊記號 %></td>
+        <td><%= link_to 'Edit', edit_kai2_ji7_path(kai2_ji7) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

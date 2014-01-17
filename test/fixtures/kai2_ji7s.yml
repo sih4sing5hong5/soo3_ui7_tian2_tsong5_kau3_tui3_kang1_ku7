@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  流水號: 1
+  漢羅文: MyString
+  全羅文: MyString
+  無齊記號: MyString
+
+two:
+  流水號: 1
+  漢羅文: MyString
+  全羅文: MyString
+  無齊記號: MyString
