@@ -22,5 +22,21 @@ ActiveRecord::Schema.define(version: 20140115151033) do
     t.integer "漢羅逝"
     t.integer "全羅逝"
   end
+  create_table '"台語文數位典藏"."改過逝資料"', force: true do |t|
+    t.integer "流水號"
+    t.string "時代"
+    t.string "年"
+    t.string "類"
+    t.string "類二"
+    t.string "漢羅標"
+    t.string "全羅標"
+    t.string "漢羅名"  
+    t.string "全羅名"
+    t.string  "檔案名"
+    t.string  "漢羅文"
+    t.string  "全羅文"
+    t.integer "漢羅逝"
+    t.integer "全羅逝"
+  end
 
 end
