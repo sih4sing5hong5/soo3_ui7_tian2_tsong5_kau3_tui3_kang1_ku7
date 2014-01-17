@@ -12,26 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :流水號 %><br>
-    <%= f.number_field :流水號 %>
-  </div>
-  <div class="field">
-    <%= f.label :漢羅文 %><br>
-    <%= f.text_field :漢羅文 %>
-  </div>
-  <div class="field">
-    <%= f.label :全羅文 %><br>
-    <%= f.text_field :全羅文 %>
-  </div>
-  <div class="field">
-    <%= f.label :漢羅逝 %><br>
-    <%= f.number_field :漢羅逝 %>
-  </div>
-  <div class="field">
-    <%= f.label :全羅逝 %><br>
-    <%= f.number_field :全羅逝 %>
-  </div>
-  <div class="actions">
+    <%= f.label :title,'檔案名' %>
+    <%= f.text_field :檔案名 %>
     <%= f.submit %>
+    <%= f.text_field :漢羅逝 %>
+    <%= f.text_field :全羅逝 %>
+  </div>
+  
+  <div class="field">
+  <table>
+	<tr>
+	<td class='行號'>
+	<textarea warp="off"><% (1..200).each do |數字| %><%= 數字 %>
+	<% end %>
+	</textarea>
+	</td>
+	<td>
+    <%= f.text_area :漢羅文 ,:wrap=>"off"%>
+  </td>
+	<td class='行號'	>
+	<textarea warp="off"><% (1..200).each do |數字| %><%= 數字 %>
+	<% end %>
+	</textarea>
+	</td>
+  <td>
+    <%= f.text_area :全羅文  ,:wrap=>"off"%>
+    </td>
+    </tr>
+  </table>
   </div>
 <% end %>
