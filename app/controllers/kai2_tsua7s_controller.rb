@@ -42,7 +42,7 @@ class Kai2Tsua7sController < ApplicationController
   def update
     respond_to do |format|
       if @kai2_tsua7.update(kai2_tsua7_params)
-        format.html { redirect_to @kai2_tsua7, notice: 'Kai2 tsua7 was successfully updated.' }
+        format.html { redirect_to edit_kai2_tsua7_path(@kai2_tsua7), notice: 'Kai2 tsua7 was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
