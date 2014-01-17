@@ -1,0 +1,28 @@
+<h1>Listing kai2_tsua7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>流水號</th>
+      <th>漢羅逝</th>
+      <th>全羅逝</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kai2_tsua7s.each do |kai2_tsua7| %>
+      <tr>
+        <td><%= kai2_tsua7.流水號 %></td>
+        <td><%= kai2_tsua7.漢羅逝 %></td>
+        <td><%= kai2_tsua7.全羅逝 %></td>
+        <td><%= link_to 'Edit', edit_kai2_tsua7_path(kai2_tsua7) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

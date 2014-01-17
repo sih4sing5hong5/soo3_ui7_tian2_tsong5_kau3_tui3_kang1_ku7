@@ -1,0 +1,37 @@
+<%= form_for(@kai2_tsua7) do |f| %>
+  <% if @kai2_tsua7.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kai2_tsua7.errors.count, "error") %> prohibited this kai2_tsua7 from being saved:</h2>
+
+      <ul>
+      <% @kai2_tsua7.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :流水號 %><br>
+    <%= f.number_field :流水號 %>
+  </div>
+  <div class="field">
+    <%= f.label :漢羅文 %><br>
+    <%= f.text_field :漢羅文 %>
+  </div>
+  <div class="field">
+    <%= f.label :全羅文 %><br>
+    <%= f.text_field :全羅文 %>
+  </div>
+  <div class="field">
+    <%= f.label :漢羅逝 %><br>
+    <%= f.number_field :漢羅逝 %>
+  </div>
+  <div class="field">
+    <%= f.label :全羅逝 %><br>
+    <%= f.number_field :全羅逝 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
